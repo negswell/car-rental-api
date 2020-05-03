@@ -17,4 +17,4 @@ express - web server
 
 mongoose - orm for mongoDB 
 
-moments - for creating custom date objects 
+moment - for creating custom date objects 
