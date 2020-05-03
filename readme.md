@@ -11,7 +11,10 @@ API requests need to be made along the /api route that is https://node-carrental
 
 The POSTMAN API collection for heroku app is  https://www.getpostman.com/collections/4f663467234ce7efce28
 
-external packages used :
+external packages used : 
+
 express - web server 
+
 mongoose - orm for mongoDB 
+
 moments - for creating custom date objects 
