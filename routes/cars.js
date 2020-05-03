@@ -27,7 +27,7 @@ router.post('/cars',(req,res) => {
         })
         .catch(err =>{
             res.status(500).json({
-                error:err.message
+                error:"Car with this vechile number already exists"
             })
         })
 
@@ -269,6 +269,7 @@ router.delete("/cars/:vehicle_number",(req,res) => {
     CarsModel
         .findOne({vehicle_number:vnumber})
         .then( car => {
+            if(!car) return res.status(404).json({error:"This car does not exist in database"})
             if (car.booking_details.status) return res.status(500).json({error:"Car is currently active can't update"})
             CarsModel
                 .deleteOne({vehicle_number:vnumber})  
